@@ -22,7 +22,7 @@
 #define PIXMAN_DISABLE_DEPRECATED
 #define PIXMAN_USE_INTERNAL_API
 
-#include "pixman.h"
+#include <pixman/pixman.h>
 #include <time.h>
 #include <assert.h>
 #include <stdio.h>

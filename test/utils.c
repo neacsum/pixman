@@ -1,5 +1,9 @@
 #define _GNU_SOURCE
 
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 #include "utils.h"
 #include <math.h>
 #include <signal.h>

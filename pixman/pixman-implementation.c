@@ -23,7 +23,14 @@
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
+#elif defined (_MSC_VER)
+#include <config_msc.h>
 #endif
+
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 #include <stdlib.h>
 #include "pixman-private.h"
 

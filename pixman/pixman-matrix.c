@@ -26,6 +26,8 @@
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
+#elif defined (_MSC_VER)
+#include <config_msc.h>
 #endif
 
 #include <math.h>
@@ -117,7 +119,7 @@ rounded_sdiv_128_by_49 (int64_t   hi,
         if (lo != 0)
             hi++;
         hi = -hi;
-        lo = -lo;
+        lo = -(int64_t)lo;
         sign ^= 1;
     }
     result_lo = rounded_udiv_128_by_48 (hi, lo, div, &result_hi);
@@ -125,8 +127,8 @@ rounded_sdiv_128_by_49 (int64_t   hi,
     {
         if (result_lo != 0)
             result_hi++;
-        result_hi = -result_hi;
-        result_lo = -result_lo;
+        result_hi = -(int64_t)result_hi;
+        result_lo = -(int64_t)result_lo;
     }
     if (signed_result_hi)
     {

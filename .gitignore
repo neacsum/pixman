@@ -54,3 +54,9 @@ test/trap-crasher
 *.ilk
 *.obj
 *.exe
+
+*.user
+.vs/
+o/
+app/
+lib/

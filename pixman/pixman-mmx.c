@@ -31,6 +31,8 @@
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
+#elif defined (_MSC_VER)
+#include <config_msc.h>
 #endif
 
 #if defined USE_X86_MMX || defined USE_ARM_IWMMXT || defined USE_LOONGSON_MMI

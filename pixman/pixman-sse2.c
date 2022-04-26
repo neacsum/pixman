@@ -28,6 +28,8 @@
  */
 #ifdef HAVE_CONFIG_H
 #include <config.h>
+#elif defined (_MSC_VER)
+#include <config_msc.h>
 #endif
 
 /* PSHUFD is slow on a lot of old processors, and new processors have SSSE3 */

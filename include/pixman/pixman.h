@@ -69,7 +69,7 @@ SOFTWARE.
 #ifndef PIXMAN_H__
 #define PIXMAN_H__
 
-#include <pixman-version.h>
+#include "pixman-version.h"
 
 #ifdef  __cplusplus
 #define PIXMAN_BEGIN_DECLS extern "C" {
@@ -1415,5 +1415,9 @@ void	      pixman_add_triangles       (pixman_image_t              *image,
 					  const pixman_triangle_t     *tris);
 
 PIXMAN_END_DECLS
+
+#ifdef _MSC_VER
+#pragma comment (lib, "pixman.lib")
+#endif
 
 #endif /* PIXMAN_H__ */
