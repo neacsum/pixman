@@ -19,5 +19,6 @@
 
 #define USE_SSSE3 1
 
+#ifndef _M_X64
 #define USE_X86_MMX 1
-
+#endif

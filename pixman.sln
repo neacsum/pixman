@@ -6,10 +6,16 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pixman", "pixman.vcxproj", "{EED66841-92C2-453A-A38B-76EF7C73EA7B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "affine-test", "test\msc\affine-test\affine-test.vcxproj", "{D968D146-479E-46A5-A356-B32C386DBC8B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EED66841-92C2-453A-A38B-76EF7C73EA7B} = {EED66841-92C2-453A-A38B-76EF7C73EA7B}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5318B4DE-075A-4B08-B966-0B9C5339D465}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "affine-bench", "test\msc\affine-bench\affine-bench.vcxproj", "{B992FFE1-B4F7-4958-A936-179F8651338C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EED66841-92C2-453A-A38B-76EF7C73EA7B} = {EED66841-92C2-453A-A38B-76EF7C73EA7B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,7 +25,8 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EED66841-92C2-453A-A38B-76EF7C73EA7B}.Debug|x64.ActiveCfg = Debug|Win32
+		{EED66841-92C2-453A-A38B-76EF7C73EA7B}.Debug|x64.ActiveCfg = Debug|x64
+		{EED66841-92C2-453A-A38B-76EF7C73EA7B}.Debug|x64.Build.0 = Debug|x64
 		{EED66841-92C2-453A-A38B-76EF7C73EA7B}.Debug|x86.ActiveCfg = Debug|Win32
 		{EED66841-92C2-453A-A38B-76EF7C73EA7B}.Debug|x86.Build.0 = Debug|Win32
 		{EED66841-92C2-453A-A38B-76EF7C73EA7B}.Release|x64.ActiveCfg = Release|Win32
